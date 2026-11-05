@@ -1,0 +1,64 @@
+{
+  "schema_version": "operator-reported-single-carry-benchmark-v1",
+  "application_name": "Applied Programming",
+  "test_date": "2026-11-05",
+  "timezone": "Asia/Seoul",
+  "hardware": {
+    "gpu": "GTX 1660",
+    "identification_source": "Operator description",
+    "independently_inspected": false
+  },
+  "runtime_commit": "510d41d940ff38107de266c134e233f293513ff9",
+  "revision_evidence": "Operator-provided git pull output immediately before the reported CPU and GPU run",
+  "configuration": {
+    "scope": "one_carry",
+    "strategy": "student.fixed_example",
+    "active_arm": "arm_0",
+    "fixed_peer_arms": 2,
+    "material": "beads",
+    "bead_count": 4,
+    "dt_s": 0.0025,
+    "substeps": 16,
+    "execution_backend": "device",
+    "trace_mode": "compact",
+    "viewer_enabled": false,
+    "requested_complete_budget_s": 1800.0,
+    "requested_process_vram_limit_GB": 5.0
+  },
+  "wall_time_s": {
+    "cpu_planning": 2.13486069999999,
+    "gpu_review_process": 908.1786373999994,
+    "additive_cpu_plus_review": 910.3134980999994
+  },
+  "timing_scope": "Source-bound CPU planning plus the separately measured GPU review process. This is one reported run, not a guarantee for other inputs or hardware.",
+  "process_vram": {
+    "sampled_peak_bytes": 2301988864.0,
+    "sampled_peak_GB": 2.301988864,
+    "sampled_peak_GiB": 2.1438941955566406,
+    "valid_sample_count": 296,
+    "maximum_valid_sample_gap_s": 6.141691400000127,
+    "measurement_source": "Windows owned-process Dedicated Usage, conservative unique all-adapter sum",
+    "sampled_peak_within_limit": true,
+    "true_peak_proven": false,
+    "hard_cap_proven": false
+  },
+  "result": {
+    "outcome": "ACCEPTED_TRANSPORT",
+    "worker_status": "ONE_CARRY_DEVICE_TRANSPORT_SAMPLED_PASS",
+    "exit_code": 0,
+    "review_accepted": true,
+    "physical_transport_accepted": true,
+    "device_completion_checks_passed": true,
+    "diagnostic_check_groups_passed": 4,
+    "timed_out": false,
+    "observed_memory_limit_stop": false,
+    "worker_failure": null,
+    "full_three_arm_mission_verified": false
+  },
+  "evidence": {
+    "source": "Instructor-provided final console supervisor summary",
+    "summary_fields_checked": true,
+    "independent_remote_raw_history_audit_performed": false,
+    "scope": "The supplied single-arm four-bead example through transport, placement, release and final rest. No qualification of arbitrary paths, liquids, sand or the full three-arm mission."
+  }
+}
