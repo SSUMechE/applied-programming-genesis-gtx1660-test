@@ -31,9 +31,9 @@ class MaterialPalette:
 
 
 _PALETTES = (
-    MaterialPalette("balls", "공", "#8b4ddb", "#44205f", "#bd8cff"),
-    MaterialPalette("water", "물", "#35bed6", "#075b99", "#54d5ee"),
-    MaterialPalette("sand", "모래", "#b69a58", "#59402c", "#a97032"),
+    MaterialPalette("balls", "Beads", "#8b4ddb", "#44205f", "#bd8cff"),
+    MaterialPalette("water", "Water", "#35bed6", "#075b99", "#54d5ee"),
+    MaterialPalette("sand", "Sand", "#b69a58", "#59402c", "#a97032"),
 )
 
 
