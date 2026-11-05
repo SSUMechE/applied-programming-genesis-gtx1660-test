@@ -216,6 +216,7 @@ def main(argv=None):
         scope='one_carry',execution_backend=args.execution_backend,device_completion_checks_passed=device_checks_passed,
         worker_pid=process.pid,worker_process_creation_unix_s=creation_s,
         exit_code=code,timed_out=timed_out,observed_memory_limit_stop=memory_limit_stop,
+        worker_failure=result.get('failure'),worker_status=result.get('status'),worker_log=str(worker_log),
         physical_transport_accepted=physical,
         gpu_review_process_wall_s=wall,attributed_cpu_planning_wall_s=cpu_wall,
         additive_cpu_plus_review_wall_s=cpu_wall+wall,requested_complete_budget_s=args.wall_limit_s,

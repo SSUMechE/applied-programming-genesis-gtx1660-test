@@ -744,6 +744,9 @@ class EpisodeJointScene(JointScene):
         def appearance(color):return {} if color is None else {'surface':gs.surfaces.Default(color=_visual_rgb(color))}
         self.scene=gs.Scene(sim_options=gs.options.SimOptions(dt=.0025,substeps=1),
             rigid_options=gs.options.RigidOptions(enable_self_collision=True,enable_neutral_collision=True,
+                # This isolated query uses poses and contacts, never constraint forces.
+                # Avoid compiling the unused force solver in Scene.build's warmup.
+                enable_collision=True,disable_constraint=True,
                 enable_adjacent_collision=False,use_hibernation=False,contact_pruning_tolerance=None),
             vis_options=gs.options.VisOptions(**({'shadow':False,'ambient_light':(.65,.65,.65),'background_color':(1.,1.,1.)} if visual is not None else {})),
             renderer=gs.renderers.Rasterizer(),show_viewer=False)
