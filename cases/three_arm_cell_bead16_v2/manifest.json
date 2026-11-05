@@ -1,0 +1,32 @@
+{
+  "schema_version": "provided-three-arm-task-inputs-v1",
+  "sources": {
+    "world.json": "b73c8ca743d45b79856ea211c743815f38be05acd8b35571b167eaff2795832a",
+    "scenario.json": "0605903b6cff8415154b966737c5a90ac64c3016096b5462672a328421388b62",
+    "physics_reference.json": "66f749c3a7a381955aa7511e3ef93957e03feb88b8854ec1dd6d7445a5f1dbdf"
+  },
+  "files": {
+    "cases\\three_arm_cell_bead16_v2\\world.json": "5685cd75be630c89d7bac2432622e79c9e66e92a3f9efb94da37a6c772f888f4",
+    "cases\\three_arm_cell_bead16_v2\\initialization.json": "2c99b0ec98210ab194e82ff8ec202149fdd059fc04d0328a98b640e5cf4bf9d1",
+    "cases\\three_arm_cell_bead16_v2\\physics_settings_reference.json": "b8b5c299ec0bc47ecd69d29d6b4d888057236dd6855d57df94ba5dee76f7754e"
+  },
+  "scope": "New explicit rigid16_bead_tc2h_v1 recipe. Geometry, material identities, initialization7q and controller/rest calibration retained from v1. No solved path or native state. Fresh native all16, automatic.04 grip, repeated material and mission proof required.",
+  "editable_example_design_initial_sha256": "9e503c441f4fe86941fd0ebab985d76ea0111c45a64f9d4dde8393f03b020a09",
+  "runtime_profile": {
+    "name": "rigid16_bead_tc2h_v1",
+    "dt_s": 0.0025,
+    "substeps": 16,
+    "substeps_local": 1,
+    "floor_and_four_bead_TC_s": 0.0003125,
+    "cup_nine_TC_s": 0.005,
+    "automatic_INITIAL_finger_authored_m": 0.04,
+    "native_or_integrated_approved": false
+  },
+  "historical_reference_scope": "The byte-preserved physics_settings_reference.json is old ninth-run controller/rest provenance only. Its historical PASS/substeps1/TC.005 does not establish this new model.",
+  "preserved_v1_files": {
+    "world.json": "559c179134d6fc29a227921fca8acf2a4390f03fb0c3bcc2ecf58bfcc753d2dc",
+    "initialization.json": "39db9d4c11fa5dfbf73311675e6e31cccf4ac9aac78905a87bd8dd9b90d4a93a",
+    "physics_settings_reference.json": "b8b5c299ec0bc47ecd69d29d6b4d888057236dd6855d57df94ba5dee76f7754e",
+    "manifest.json": "cde7f0533238a4d17a6463b19a642e53b46649233f33d05011ea6b17bf4a211f"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "status": "RELEASED_DELIVERY_SAMPLED_PASS",
+  "controller": {
+    "name": "gravity_pd",
+    "kp": [
+      9000,
+      9000,
+      7000,
+      7000,
+      4000,
+      4000,
+      4000,
+      2000,
+      2000
+    ],
+    "kv": [
+      636.3961030678928,
+      636.3961030678928,
+      494.9747468305833,
+      494.9747468305833,
+      282.842712474619,
+      282.842712474619,
+      282.842712474619,
+      100.0,
+      100.0
+    ],
+    "effort_limits": [
+      87,
+      87,
+      87,
+      87,
+      12,
+      12,
+      12,
+      100,
+      100
+    ]
+  },
+  "execution_limits": {
+    "tracking_error_rad": 0.03,
+    "final_joint_error_rad": 0.01,
+    "final_hand_position_error_m": 0.006,
+    "final_hand_orientation_error_rad": 0.04,
+    "final_body_position_error_m": 0.006,
+    "final_body_orientation_error_rad": 0.04,
+    "held_translation_drift_m": 0.0001,
+    "held_orientation_drift_rad": 0.001,
+    "final_hold_s": 0.5,
+    "rest_window_s": 0.1,
+    "rest_speed_rad_s": 0.001,
+    "rest_acceleration_fd_rad_s2": 0.05
+  },
+  "input_source_hashes_still_match": true,
+  "frozen_snapshot_hashes_still_match": true,
+  "configured_grasp_physics": {
+    "requested": {
+      "noslip_iterations": 5,
+      "torsional_friction": true,
+      "tray_torsional_radius_m": 0.001
+    },
+    "diagnostic_simulation": {
+      "dt_s": 0.0025,
+      "finger_equality_timeconst_s": 0.01,
+      "substeps": 1
+    }
+  },
+  "contact_accuracy_configuration": {
+    "requested": {
+      "contact_pruning_tolerance": null,
+      "dt_s": 0.0025,
+      "geometry_timeconst_s": 0.005,
+      "schema_version": "contact-accuracy-request-v1",
+      "target_entities": [
+        "tray_0",
+        "tray_0_ball_0",
+        "tray_0_ball_1",
+        "tray_0_ball_2",
+        "tray_0_ball_3"
+      ]
+    }
+  },
+  "provenance": {
+    "source_result_sha256": "66f749c3a7a381955aa7511e3ef93957e03feb88b8854ec1dd6d7445a5f1dbdf",
+    "scope": "Inherited measured controller/physics calibration only. This is not a success claim for a new student layout."
+  }
+}

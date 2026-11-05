@@ -1,0 +1,30 @@
+{
+  "schema_version": "applied-programming-environment-reference-v1",
+  "environment_name": "applied-programming-cuda",
+  "python_major_minor": [
+    3,
+    12
+  ],
+  "reference_python_patch": "3.12.13",
+  "supported_OS": "Windows",
+  "machine_bits": 64,
+  "CUDA_wheel": "12.6",
+  "minimum_compute_capability": [
+    7,
+    5
+  ],
+  "target_GPU_family": "GeForce GTX 1660 (including SUPER/Ti)",
+  "existing_environment_only": true,
+  "automatic_install_or_downgrade": false,
+  "public_packages": {
+    "torch": "https://download.pytorch.org/whl/cu126/torch/",
+    "genesis-world": "https://pypi.org/project/genesis-world/1.3.2/",
+    "quadrants": "https://pypi.org/project/quadrants/1.2.0/"
+  },
+  "public_Windows_CP312_wheel_hashes": {
+    "torch-2.14.0+cu126-cp312-cp312-win_amd64.whl": "11a492e40dfd18597fdb8271879a3a09496a23140deb81a6b5a005d9cff7312b",
+    "genesis_world-1.3.2-py3-none-any.whl": "805ab231f4df5c1b13c256645f14e36cda7eab411cd8fc09f5b46929933e72d3",
+    "quadrants-1.2.0-cp312-cp312-win_amd64.whl": "5b5637feff865cda4f22d598568747a0111e265c65f932bb55e34a3466a04103"
+  },
+  "scope": "Exact reference package/source verification and optional real CUDA/compiler smoke test. GTX1660 full transport and timing remain unmeasured until that PC runs the example."
+}
