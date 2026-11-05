@@ -327,6 +327,7 @@ def _worker_main(argv=None):
             if not callable(edge_timing_hook):
                 raise ContractError("Timing opt-in requires the selected strategy choose_edge_durations_s callback")
         nominal_transform = None
+        fixed_endpoints = None
         prepared_recipient_terminals = {}
         if args.scope == "one-carry":
             from physics.one_carry_planning import make_initial_fixture, apply_initial_fixture
@@ -337,8 +338,16 @@ def _worker_main(argv=None):
             endpoint_kin = BoundedKinematics(old_cpu, endpoint_limits, scenario["case"]["tool_workspace_m"],
                 max_fk_calls=32, max_ik_calls=32, wall_check=check)
             grasp = grasp_endpoint_candidates(model, body_pose.to_record())[0].to_record()
-            selected = solve_endpoint(endpoint_kin, GuardedOracle(old_cpu), tuple(commands["arm_0"]["q_rad"]),
-                (grasp,), attempts=32, seed=71, wall_check=check)
+            if strategy.__name__ == "student.fixed_example":
+                from supplied_support.fixed_example_endpoints import bind_fixed_example_endpoints, validate_fixed_endpoint
+                fixed_endpoints = bind_fixed_example_endpoints(world, scenario, design.to_record())
+                selected = validate_fixed_endpoint(endpoint_kin, GuardedOracle(old_cpu),
+                    fixed_endpoints[0], grasp, wall_check=check)
+                bundle["offline_planner"].update(endpoint_input_mode="supplied_fixed_joint_coordinates",
+                    endpoint_attempts=0, fixed_source_endpoint_validation=selected)
+            else:
+                selected = solve_endpoint(endpoint_kin, GuardedOracle(old_cpu), tuple(commands["arm_0"]["q_rad"]),
+                    (grasp,), attempts=32, seed=71, wall_check=check)
             if selected["status"] != "ENDPOINT_FOUND":
                 raise ContractError("CPU supplied source grasp endpoint not found")
             # Canonicalize declared INITIAL before RRT. Frozen output is never rounded during replay.
@@ -414,6 +423,9 @@ def _worker_main(argv=None):
                     raw_terminal = prepared_recipient_terminals.pop(arm)
                     if not oracle.state_valid(raw_terminal["q_rad"]):
                         raise ContractError("Computed parked peers no longer permit the saved next-grasp endpoint")
+                elif fixed_endpoints is not None:
+                    raw_terminal = validate_fixed_endpoint(endpoint_kinematics, oracle,
+                        fixed_endpoints[1], nominal_hand, wall_check=check)
                 else:
                     raw_terminal = solve_endpoint(endpoint_kinematics, oracle, start_q, (nominal_hand,), attempts=32, seed=71+index, wall_check=check)
                 terminal = {"schema_version": "cpu-nominal-terminal-endpoint-v1", "cpu_solver_result": raw_terminal,
@@ -657,7 +669,9 @@ def main(argv=None):
     print(json.dumps({'status':summary['status'], 'output':str(out),
         'worker_process_wall_s':summary.get('worker_process_wall_s'),
         'cpu_attributed_parent_wall_s':summary.get('process_wall_s'),
-        'timed_out':receipt['timed_out'], 'public_bundle_exported':success}), flush=True)
+        'timed_out':receipt['timed_out'], 'public_bundle_exported':success,
+        'failure':summary.get('failure') or receipt.get('failure'),
+        'worker_log':str(out/'worker_stdout.log')}), flush=True)
     return 0 if success else 1
 
 
