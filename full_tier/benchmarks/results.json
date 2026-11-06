@@ -1,0 +1,101 @@
+{
+  "schema_version": "ap-full-mission-benchmark-results-v1",
+  "measurement_hardware": "NVIDIA GeForce RTX 4090",
+  "GTX1660_full_mission_measured": false,
+  "scope": "Three supplied fixed-route examples on the recorded RTX 4090. No path-search or other-hardware performance claim.",
+  "physics": {
+    "material": "beads",
+    "original_bead_count": 4,
+    "dt_s": 0.0025,
+    "internal_substeps": 16,
+    "model": "persistent_three_native_arms_serial_actor"
+  },
+  "timing": {
+    "task_start_native_tick": 200,
+    "initial_excluded_s": 0.5,
+    "end": "accepted_terminal_rest",
+    "donor_return_physical_ticks": 0,
+    "final_return_required": false,
+    "CPU_scope": "Fresh local supplied-route validation/export, excluding original RRT generation. The three CPU exports ran concurrently.",
+    "wall_scope": "Attributed CPU validation/export plus the whole supervised GPU review process.",
+    "background_scope": "Unrelated background GPU work was left untouched. These are individual observed runs."
+  },
+  "memory_scope": "Sampled owned-process usage in decimal GB. Sampling does not prove a hard allocation cap.",
+  "RTX4090_fixed_examples_passed": true,
+  "competition_qualified": false,
+  "student_release_approved": false,
+  "benchmarks": [
+    {
+      "difficulty": "easy",
+      "active_arms": 1,
+      "handoffs": 0,
+      "design_speed_scale": 0.75,
+      "outcome": "ACCEPTED_FULL_MISSION",
+      "full_mission_passed": true,
+      "independent_raw_audit_passed": true,
+      "task_simulation_s": 18.4425,
+      "global_native_end_s": 18.9425,
+      "CPU_validation_export_wall_s": 2.4792893000412732,
+      "GPU_review_process_wall_s": 742.7000440000556,
+      "CPU_plus_GPU_wall_s": 745.1793333000969,
+      "sampled_owned_process_peak_GB": 3.338964992,
+      "minimum_retained_beads": 4,
+      "maximum_cup_tilt_deg": 7.301503158527125,
+      "plot": "benchmarks/easy_recorded_outcome.png",
+      "plot_sha256": "88591a32f6afda496e023d31e7c2fc8aa0667d8de93b5367891767be2d98b5c2",
+      "evidence_sha256": {
+        "supervisor": "a434e9e8933addb835cbb68c965a29dbe39d536feeb24d009cadf2f79bb6faa6",
+        "independent_raw_audit": "e9e8559a0dd317b8134edbadba4c4ff8bb2f39d1ae67b1e41b8b7a3a5a863d2f",
+        "actual_plot_receipt": "6b089323e013d7d44589d98032576413712f10a2c9f233459c6f3dc76fe4ec43"
+      }
+    },
+    {
+      "difficulty": "medium",
+      "active_arms": 2,
+      "handoffs": 1,
+      "design_speed_scale": 0.5,
+      "outcome": "ACCEPTED_FULL_MISSION",
+      "full_mission_passed": true,
+      "independent_raw_audit_passed": true,
+      "task_simulation_s": 56.7625,
+      "global_native_end_s": 57.2625,
+      "CPU_validation_export_wall_s": 4.6843388001434505,
+      "GPU_review_process_wall_s": 2417.471300699981,
+      "CPU_plus_GPU_wall_s": 2422.1556395001244,
+      "sampled_owned_process_peak_GB": 3.512832,
+      "minimum_retained_beads": 4,
+      "maximum_cup_tilt_deg": 6.90557013412219,
+      "plot": "benchmarks/medium_recorded_outcome.png",
+      "plot_sha256": "db2da09bb6301d0f16898fe61684b01be757cc4d3cae059af85370e03f6bf553",
+      "evidence_sha256": {
+        "supervisor": "16553e3ee97cd3813db771e399de0dc46f8901e116103107ce613159e8688b8a",
+        "independent_raw_audit": "f990d9b6c22ffa47c9c5c0558ded663706f304357857e4d37213adb5d87b3efd",
+        "actual_plot_receipt": "2b4f4495602f9f633cb569809849bf7589dca7ddf785716fef5bfd82785e5bfc"
+      }
+    },
+    {
+      "difficulty": "hard",
+      "active_arms": 3,
+      "handoffs": 2,
+      "design_speed_scale": 0.5,
+      "outcome": "ACCEPTED_FULL_MISSION",
+      "full_mission_passed": true,
+      "independent_raw_audit_passed": true,
+      "task_simulation_s": 72.6775,
+      "global_native_end_s": 73.1775,
+      "CPU_validation_export_wall_s": 6.038687000051141,
+      "GPU_review_process_wall_s": 3122.3411818998866,
+      "CPU_plus_GPU_wall_s": 3128.3798688999377,
+      "sampled_owned_process_peak_GB": 3.659829248,
+      "minimum_retained_beads": 4,
+      "maximum_cup_tilt_deg": 7.297375299471342,
+      "plot": "benchmarks/hard_recorded_outcome.png",
+      "plot_sha256": "e0d42221e8e9e25a1748469bddde845f743d3068c43a43f14a171bc5edafbb61",
+      "evidence_sha256": {
+        "supervisor": "59c1ecf727262c0e588b1897c92d0e833896841fffa6650ff79cb3d89fd3c6e5",
+        "independent_raw_audit": "91b2ab204d419fea893e78c795dc0275f0273fc0c766b85d84b649e847c70547",
+        "actual_plot_receipt": "bfbd0d6afcf778923a7674bb8682a398de6485fb31cad446b5382990779abc4b"
+      }
+    }
+  ]
+}

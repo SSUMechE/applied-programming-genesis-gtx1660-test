@@ -1,0 +1,20 @@
+{
+  "schema_version": "provided-three-arm-task-inputs-v1",
+  "files": {
+    "cases/difficulty_20261106/easy_open_v1/initialization.json": "460d171b06af04687756c645ced8ee84a88531d9979c258bfb605ef7080fd910",
+    "cases/difficulty_20261106/easy_open_v1/physics_settings_reference.json": "b8b5c299ec0bc47ecd69d29d6b4d888057236dd6855d57df94ba5dee76f7754e",
+    "cases/difficulty_20261106/easy_open_v1/world.json": "59084510c0f42ab01b0e9e3317ace92cf2a3a26adac4be226fe5f8c4bafbd96b"
+  },
+  "source_case": {
+    "cases/three_arm_cell_bead16_v2/world.json": "5685cd75be630c89d7bac2432622e79c9e66e92a3f9efb94da37a6c772f888f4",
+    "cases/three_arm_cell_bead16_v2/initialization.json": "2c99b0ec98210ab194e82ff8ec202149fdd059fc04d0328a98b640e5cf4bf9d1",
+    "cases/three_arm_cell_bead16_v2/manifest.json": "6e955acfbf36dd03f3b314307e8d3903b3a24c43ff88824efa4f5fff7876c297"
+  },
+  "instructor_builder_sha256": "05eb3820be2a01bdcf7277c8eef87d4c442de9dd6fc28bbf9f02098064a64c02",
+  "fixed_physics_and_criteria_signature_sha256": "2ea9171ad62a65a128ad56525774759a5b9ed95f886951744214b956826c7135",
+  "scope": "New instructor geometry candidate. All named tier/native/diversity suitability gates remain pending. Not a student route or an accepted mission.",
+  "supplemental_files": {
+    "cases/difficulty_20261106/easy_open_v1/difficulty_target.json": "fad096546ce530499ea67191867bd9aee8f0412e80c8bc5ae8b8f3244b2ae9e7",
+    "cases/difficulty_20261106/easy_open_v1/map_geometry.json": "8dd5f0fb6c8fe0907ded09fa27f81400c9d14dda19a9a2ada70f883f3ca4c8f2"
+  }
+}

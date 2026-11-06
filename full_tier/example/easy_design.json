@@ -1,0 +1,45 @@
+{
+  "schema_version": "three-arm-design-v1",
+  "arms": [
+    {
+      "id": "arm_0",
+      "mount_region": "terrain_west_north",
+      "base_placement": {
+        "x_m": 0.5,
+        "y_m": 0.48,
+        "yaw_rad": -2.4668517113662407
+      }
+    },
+    {
+      "id": "arm_1",
+      "mount_region": "terrain_middle_south",
+      "base_placement": {
+        "x_m": 1.73,
+        "y_m": 0.85,
+        "yaw_rad": 2.880113837877544
+      }
+    },
+    {
+      "id": "arm_2",
+      "mount_region": "terrain_east_south",
+      "base_placement": {
+        "x_m": 2.7,
+        "y_m": 1.65,
+        "yaw_rad": -1.5707963267948966
+      }
+    }
+  ],
+  "relays": [
+    {
+      "support_id": "relay_1_support",
+      "x_m": 1.02,
+      "y_m": 1.04
+    },
+    {
+      "support_id": "relay_2_support",
+      "x_m": 2.35,
+      "y_m": 1.02
+    }
+  ],
+  "joint_speed_scale": 0.75
+}

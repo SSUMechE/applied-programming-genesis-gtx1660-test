@@ -1,0 +1,22 @@
+{
+  "GTX1660_full_tier_measured": false,
+  "design_speed_scales": {
+    "easy": 0.75,
+    "hard": 0.5,
+    "medium": 0.5
+  },
+  "model": "Persistent three-native-arm57DOF, one serial commanded actor, four beads, dt.0025/substeps16",
+  "physics_changed": false,
+  "provided_fixed_route_validation_not_RRT_generation": true,
+  "schema_version": "portable-tier-package-status-v2",
+  "status": "RTX4090_FIXED_EXAMPLES_PASSED_GTX1660_MEASUREMENT_PENDING",
+  "RTX4090_fixed_examples_passed": true,
+  "competition_qualified": false,
+  "student_release_approved": false,
+  "native_validation_scope": "Exact supplied Easy, Medium and Hard fixed examples on the recorded NVIDIA GeForce RTX 4090 only.",
+  "machine_bound_saved_bundles_shipped": false,
+  "raw_native_histories_or_logs_shipped": false,
+  "recorded_native_plots_shipped": true,
+  "benchmark_results": "benchmarks/results.json",
+  "benchmark_results_sha256": "0b8f2cc681234ec93cd85ad61eac62d5deb249861ba6a6e12565ad5fa3a52516"
+}

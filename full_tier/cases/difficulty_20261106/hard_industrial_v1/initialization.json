@@ -1,0 +1,2928 @@
+{
+  "schema_version": "industrial-cell-readiness-scenario-v1",
+  "case": {
+    "arm_joint_names": [
+      "joint1",
+      "joint2",
+      "joint3",
+      "joint4",
+      "joint5",
+      "joint6",
+      "joint7"
+    ],
+    "base_z_m": 0.0,
+    "case_id": "difficulty_20261106_hard_industrial_v1",
+    "design_rationale": "All original industrial service obstacles retained. Three-leg mission target is separate from the currently qualified first-arm device carry.",
+    "goal_tool_pose": {
+      "frame": "world",
+      "position_m": [
+        3.350028495681496,
+        2.100070080138388,
+        0.923100047161232
+      ],
+      "quaternion_wxyz": [
+        0.0003389478431167271,
+        0.9999999321569214,
+        -4.406068975488371e-05,
+        -0.00013732868479207226
+      ]
+    },
+    "installation_zones": [
+      {
+        "x_m": [
+          0.15,
+          0.55
+        ],
+        "y_m": [
+          -0.58,
+          -0.1
+        ],
+        "yaw_rad": [
+          -3.141592653589793,
+          3.141592653589793
+        ]
+      },
+      {
+        "x_m": [
+          0.15,
+          0.55
+        ],
+        "y_m": [
+          0.1,
+          0.5
+        ],
+        "yaw_rad": [
+          -3.141592653589793,
+          3.141592653589793
+        ]
+      },
+      {
+        "x_m": [
+          1.7,
+          2.05
+        ],
+        "y_m": [
+          0.3,
+          0.85
+        ],
+        "yaw_rad": [
+          -3.141592653589793,
+          3.141592653589793
+        ]
+      },
+      {
+        "x_m": [
+          0.95,
+          1.4
+        ],
+        "y_m": [
+          1.25,
+          1.75
+        ],
+        "yaw_rad": [
+          -3.141592653589793,
+          3.141592653589793
+        ]
+      },
+      {
+        "x_m": [
+          2.7,
+          3.05
+        ],
+        "y_m": [
+          1.65,
+          1.95
+        ],
+        "yaw_rad": [
+          -3.141592653589793,
+          3.141592653589793
+        ]
+      },
+      {
+        "x_m": [
+          2.7,
+          3.05
+        ],
+        "y_m": [
+          2.15,
+          2.48
+        ],
+        "yaw_rad": [
+          -3.141592653589793,
+          3.141592653589793
+        ]
+      },
+      {
+        "x_m": [
+          1.65,
+          2.0
+        ],
+        "y_m": [
+          1.18,
+          1.55
+        ],
+        "yaw_rad": [
+          -3.141592653589793,
+          3.141592653589793
+        ]
+      },
+      {
+        "x_m": [
+          1.1,
+          1.4
+        ],
+        "y_m": [
+          0.55,
+          0.85
+        ],
+        "yaw_rad": [
+          -3.141592653589793,
+          3.141592653589793
+        ]
+      }
+    ],
+    "measurement_scope": "Oracle-compatible geometry record only. Not a single-arm task or proof of relay feasibility.",
+    "motion_limits": {
+      "acceleration_rad_s2": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.8,
+        2.8,
+        2.8
+      ],
+      "source": "instructor chosen task constraints",
+      "velocity_rad_s": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.4,
+        1.4,
+        1.4
+      ]
+    },
+    "obstacles": [
+      {
+        "id": "boundary_west",
+        "lower_m": [
+          -0.5,
+          -0.75,
+          0.0
+        ],
+        "upper_m": [
+          -0.44,
+          2.65,
+          2.0
+        ]
+      },
+      {
+        "id": "boundary_east",
+        "lower_m": [
+          3.69,
+          -0.75,
+          0.0
+        ],
+        "upper_m": [
+          3.75,
+          2.65,
+          2.0
+        ]
+      },
+      {
+        "id": "boundary_south",
+        "lower_m": [
+          -0.44,
+          -0.75,
+          0.0
+        ],
+        "upper_m": [
+          3.69,
+          -0.69,
+          2.0
+        ]
+      },
+      {
+        "id": "boundary_north",
+        "lower_m": [
+          -0.44,
+          2.59,
+          0.0
+        ],
+        "upper_m": [
+          3.69,
+          2.65,
+          2.0
+        ]
+      },
+      {
+        "id": "island_toe",
+        "lower_m": [
+          1.51,
+          0.99,
+          0.0
+        ],
+        "upper_m": [
+          1.76,
+          1.04,
+          0.26
+        ]
+      },
+      {
+        "id": "lower_roof",
+        "lower_m": [
+          0.65,
+          -0.35,
+          0.62
+        ],
+        "upper_m": [
+          1.3,
+          0.05,
+          0.74
+        ]
+      },
+      {
+        "id": "lower_post_1",
+        "lower_m": [
+          0.66,
+          -0.35,
+          0.0
+        ],
+        "upper_m": [
+          0.72,
+          -0.28,
+          0.62
+        ]
+      },
+      {
+        "id": "lower_post_2",
+        "lower_m": [
+          1.23,
+          -0.35,
+          0.0
+        ],
+        "upper_m": [
+          1.3,
+          -0.28,
+          0.62
+        ]
+      },
+      {
+        "id": "offset_baffle_1",
+        "lower_m": [
+          0.72,
+          0.08,
+          0.0
+        ],
+        "upper_m": [
+          0.82,
+          0.34,
+          0.95
+        ]
+      },
+      {
+        "id": "offset_baffle_2",
+        "lower_m": [
+          0.75,
+          0.56,
+          0.0
+        ],
+        "upper_m": [
+          0.85,
+          0.78,
+          0.8
+        ]
+      },
+      {
+        "id": "upper_arch_roof",
+        "lower_m": [
+          0.84,
+          0.83,
+          1.1
+        ],
+        "upper_m": [
+          1.12,
+          1.1,
+          1.22
+        ]
+      },
+      {
+        "id": "upper_arch_post",
+        "lower_m": [
+          0.84,
+          0.83,
+          0.0
+        ],
+        "upper_m": [
+          0.91,
+          0.9,
+          1.1
+        ]
+      },
+      {
+        "id": "east_baffle",
+        "lower_m": [
+          2.46,
+          1.45,
+          0.0
+        ],
+        "upper_m": [
+          2.55,
+          1.82,
+          1.1
+        ]
+      },
+      {
+        "id": "east_overhang",
+        "lower_m": [
+          2.3,
+          2.15,
+          0.85
+        ],
+        "upper_m": [
+          2.64,
+          2.28,
+          0.98
+        ]
+      },
+      {
+        "id": "east_overhang_post",
+        "lower_m": [
+          2.3,
+          2.21,
+          0.0
+        ],
+        "upper_m": [
+          2.37,
+          2.28,
+          0.85
+        ]
+      },
+      {
+        "id": "side_roof",
+        "lower_m": [
+          2.18,
+          0.55,
+          0.65
+        ],
+        "upper_m": [
+          2.48,
+          0.78,
+          0.78
+        ]
+      },
+      {
+        "id": "side_roof_post",
+        "lower_m": [
+          2.18,
+          0.55,
+          0.0
+        ],
+        "upper_m": [
+          2.25,
+          0.62,
+          0.65
+        ]
+      },
+      {
+        "id": "s0_rear_l",
+        "lower_m": [
+          -0.35,
+          0.12,
+          0.0
+        ],
+        "upper_m": [
+          -0.31,
+          0.2,
+          1.16
+        ]
+      },
+      {
+        "id": "s0_rear_r",
+        "lower_m": [
+          0.01,
+          0.12,
+          0.0
+        ],
+        "upper_m": [
+          0.04,
+          0.2,
+          1.16
+        ]
+      },
+      {
+        "id": "s0_front_l",
+        "lower_m": [
+          -0.35,
+          -0.2,
+          0.0
+        ],
+        "upper_m": [
+          -0.31,
+          -0.12,
+          0.55
+        ]
+      },
+      {
+        "id": "s0_front_r",
+        "lower_m": [
+          0.01,
+          -0.2,
+          0.0
+        ],
+        "upper_m": [
+          0.04,
+          -0.12,
+          0.55
+        ]
+      },
+      {
+        "id": "s0_top_rail",
+        "lower_m": [
+          -0.35,
+          0.12,
+          1.16
+        ],
+        "upper_m": [
+          0.05,
+          0.2,
+          1.2
+        ]
+      },
+      {
+        "id": "s0_lower_shelf",
+        "lower_m": [
+          -0.31,
+          -0.16,
+          0.18
+        ],
+        "upper_m": [
+          0.01,
+          0.16,
+          0.22
+        ]
+      },
+      {
+        "id": "s0_upper_shelf",
+        "lower_m": [
+          -0.31,
+          -0.16,
+          1.02
+        ],
+        "upper_m": [
+          0.01,
+          0.16,
+          1.06
+        ]
+      },
+      {
+        "id": "q1_base",
+        "lower_m": [
+          0.35,
+          1.48,
+          0.0
+        ],
+        "upper_m": [
+          0.83,
+          1.92,
+          0.52
+        ]
+      },
+      {
+        "id": "q1_left",
+        "lower_m": [
+          0.35,
+          1.48,
+          0.52
+        ],
+        "upper_m": [
+          0.38,
+          1.89,
+          0.96
+        ]
+      },
+      {
+        "id": "q1_right",
+        "lower_m": [
+          0.8,
+          1.48,
+          0.52
+        ],
+        "upper_m": [
+          0.83,
+          1.89,
+          0.96
+        ]
+      },
+      {
+        "id": "q1_back",
+        "lower_m": [
+          0.35,
+          1.89,
+          0.52
+        ],
+        "upper_m": [
+          0.83,
+          1.92,
+          0.96
+        ]
+      },
+      {
+        "id": "q1_roof",
+        "lower_m": [
+          0.35,
+          1.48,
+          0.96
+        ],
+        "upper_m": [
+          0.83,
+          1.92,
+          1.0
+        ]
+      },
+      {
+        "id": "q1_pan",
+        "lower_m": [
+          0.41,
+          1.55,
+          0.52
+        ],
+        "upper_m": [
+          0.77,
+          1.8,
+          0.56
+        ]
+      },
+      {
+        "id": "q2_base",
+        "lower_m": [
+          1.55,
+          1.05,
+          0.0
+        ],
+        "upper_m": [
+          2.1,
+          1.68,
+          0.44
+        ]
+      },
+      {
+        "id": "q2_left",
+        "lower_m": [
+          1.55,
+          1.05,
+          0.44
+        ],
+        "upper_m": [
+          1.63,
+          1.6,
+          0.94
+        ]
+      },
+      {
+        "id": "q2_right",
+        "lower_m": [
+          2.02,
+          1.05,
+          0.44
+        ],
+        "upper_m": [
+          2.1,
+          1.6,
+          0.94
+        ]
+      },
+      {
+        "id": "q2_back",
+        "lower_m": [
+          1.55,
+          1.6,
+          0.44
+        ],
+        "upper_m": [
+          2.1,
+          1.68,
+          0.94
+        ]
+      },
+      {
+        "id": "q2_front_l",
+        "lower_m": [
+          1.63,
+          1.05,
+          0.44
+        ],
+        "upper_m": [
+          1.67,
+          1.11,
+          0.94
+        ]
+      },
+      {
+        "id": "q2_front_r",
+        "lower_m": [
+          1.98,
+          1.05,
+          0.44
+        ],
+        "upper_m": [
+          2.02,
+          1.11,
+          0.94
+        ]
+      },
+      {
+        "id": "q2_front_bottom",
+        "lower_m": [
+          1.67,
+          1.05,
+          0.44
+        ],
+        "upper_m": [
+          1.98,
+          1.11,
+          0.46
+        ]
+      },
+      {
+        "id": "q2_front_top",
+        "lower_m": [
+          1.67,
+          1.05,
+          0.94
+        ],
+        "upper_m": [
+          1.98,
+          1.11,
+          1.02
+        ]
+      },
+      {
+        "id": "q2_pan_stand",
+        "lower_m": [
+          1.79,
+          1.24,
+          0.44
+        ],
+        "upper_m": [
+          1.86,
+          1.36,
+          0.46
+        ]
+      },
+      {
+        "id": "q2_pan",
+        "lower_m": [
+          1.72,
+          1.13,
+          0.46
+        ],
+        "upper_m": [
+          1.93,
+          1.48,
+          0.48
+        ]
+      },
+      {
+        "id": "p1_leg_0_0",
+        "lower_m": [
+          3.19,
+          1.94,
+          0.0
+        ],
+        "upper_m": [
+          3.225,
+          1.9749999999999999,
+          0.66
+        ]
+      },
+      {
+        "id": "p1_leg_0_1",
+        "lower_m": [
+          3.19,
+          2.225,
+          0.0
+        ],
+        "upper_m": [
+          3.225,
+          2.2600000000000002,
+          0.66
+        ]
+      },
+      {
+        "id": "p1_leg_1_0",
+        "lower_m": [
+          3.475,
+          1.94,
+          0.0
+        ],
+        "upper_m": [
+          3.5100000000000002,
+          1.9749999999999999,
+          0.66
+        ]
+      },
+      {
+        "id": "p1_leg_1_1",
+        "lower_m": [
+          3.475,
+          2.225,
+          0.0
+        ],
+        "upper_m": [
+          3.5100000000000002,
+          2.2600000000000002,
+          0.66
+        ]
+      },
+      {
+        "id": "p1_cabinet",
+        "lower_m": [
+          3.18,
+          2.29,
+          0.0
+        ],
+        "upper_m": [
+          3.52,
+          2.52,
+          1.3
+        ]
+      },
+      {
+        "id": "terrain_west_south_leg_0_0",
+        "lower_m": [
+          0.06999999999999999,
+          -0.6599999999999999,
+          0.0
+        ],
+        "upper_m": [
+          0.10999999999999999,
+          -0.6199999999999999,
+          0.045
+        ]
+      },
+      {
+        "id": "terrain_west_south_leg_0_1",
+        "lower_m": [
+          0.06999999999999999,
+          -0.06,
+          0.0
+        ],
+        "upper_m": [
+          0.10999999999999999,
+          -0.019999999999999997,
+          0.045
+        ]
+      },
+      {
+        "id": "terrain_west_south_leg_1_0",
+        "lower_m": [
+          0.5900000000000001,
+          -0.6599999999999999,
+          0.0
+        ],
+        "upper_m": [
+          0.6300000000000001,
+          -0.6199999999999999,
+          0.045
+        ]
+      },
+      {
+        "id": "terrain_west_south_leg_1_1",
+        "lower_m": [
+          0.5900000000000001,
+          -0.06,
+          0.0
+        ],
+        "upper_m": [
+          0.6300000000000001,
+          -0.019999999999999997,
+          0.045
+        ]
+      },
+      {
+        "id": "terrain_west_north_leg_0_0",
+        "lower_m": [
+          0.06999999999999999,
+          0.02,
+          0.0
+        ],
+        "upper_m": [
+          0.10999999999999999,
+          0.06,
+          0.41500000000000004
+        ]
+      },
+      {
+        "id": "terrain_west_north_leg_0_1",
+        "lower_m": [
+          0.06999999999999999,
+          0.54,
+          0.0
+        ],
+        "upper_m": [
+          0.10999999999999999,
+          0.5800000000000001,
+          0.41500000000000004
+        ]
+      },
+      {
+        "id": "terrain_west_north_leg_1_0",
+        "lower_m": [
+          0.5900000000000001,
+          0.02,
+          0.0
+        ],
+        "upper_m": [
+          0.6300000000000001,
+          0.06,
+          0.41500000000000004
+        ]
+      },
+      {
+        "id": "terrain_west_north_leg_1_1",
+        "lower_m": [
+          0.5900000000000001,
+          0.54,
+          0.0
+        ],
+        "upper_m": [
+          0.6300000000000001,
+          0.5800000000000001,
+          0.41500000000000004
+        ]
+      },
+      {
+        "id": "terrain_west_north_brace_0",
+        "lower_m": [
+          0.10999999999999999,
+          0.02,
+          0.1575
+        ],
+        "upper_m": [
+          0.5900000000000001,
+          0.06,
+          0.1825
+        ]
+      },
+      {
+        "id": "terrain_west_north_brace_1",
+        "lower_m": [
+          0.10999999999999999,
+          0.54,
+          0.1575
+        ],
+        "upper_m": [
+          0.5900000000000001,
+          0.5800000000000001,
+          0.1825
+        ]
+      },
+      {
+        "id": "terrain_middle_south_leg_0_0",
+        "lower_m": [
+          1.6199999999999999,
+          0.21999999999999997,
+          0.0
+        ],
+        "upper_m": [
+          1.66,
+          0.25999999999999995,
+          0.345
+        ]
+      },
+      {
+        "id": "terrain_middle_south_leg_0_1",
+        "lower_m": [
+          1.6199999999999999,
+          0.8899999999999999,
+          0.0
+        ],
+        "upper_m": [
+          1.66,
+          0.9299999999999999,
+          0.345
+        ]
+      },
+      {
+        "id": "terrain_middle_south_leg_1_0",
+        "lower_m": [
+          2.09,
+          0.21999999999999997,
+          0.0
+        ],
+        "upper_m": [
+          2.13,
+          0.25999999999999995,
+          0.345
+        ]
+      },
+      {
+        "id": "terrain_middle_south_leg_1_1",
+        "lower_m": [
+          2.09,
+          0.8899999999999999,
+          0.0
+        ],
+        "upper_m": [
+          2.13,
+          0.9299999999999999,
+          0.345
+        ]
+      },
+      {
+        "id": "terrain_middle_south_brace_0",
+        "lower_m": [
+          1.66,
+          0.21999999999999997,
+          0.13299999999999998
+        ],
+        "upper_m": [
+          2.09,
+          0.25999999999999995,
+          0.15799999999999997
+        ]
+      },
+      {
+        "id": "terrain_middle_south_brace_1",
+        "lower_m": [
+          1.66,
+          0.8899999999999999,
+          0.13299999999999998
+        ],
+        "upper_m": [
+          2.09,
+          0.9299999999999999,
+          0.15799999999999997
+        ]
+      },
+      {
+        "id": "terrain_middle_north_leg_0_0",
+        "lower_m": [
+          0.87,
+          1.17,
+          0.0
+        ],
+        "upper_m": [
+          0.91,
+          1.21,
+          0.125
+        ]
+      },
+      {
+        "id": "terrain_middle_north_leg_0_1",
+        "lower_m": [
+          0.87,
+          1.79,
+          0.0
+        ],
+        "upper_m": [
+          0.91,
+          1.83,
+          0.125
+        ]
+      },
+      {
+        "id": "terrain_middle_north_leg_1_0",
+        "lower_m": [
+          1.44,
+          1.17,
+          0.0
+        ],
+        "upper_m": [
+          1.48,
+          1.21,
+          0.125
+        ]
+      },
+      {
+        "id": "terrain_middle_north_leg_1_1",
+        "lower_m": [
+          1.44,
+          1.79,
+          0.0
+        ],
+        "upper_m": [
+          1.48,
+          1.83,
+          0.125
+        ]
+      },
+      {
+        "id": "terrain_east_south_leg_0_0",
+        "lower_m": [
+          2.62,
+          1.5699999999999998,
+          0.0
+        ],
+        "upper_m": [
+          2.66,
+          1.6099999999999999,
+          0.6649999999999999
+        ]
+      },
+      {
+        "id": "terrain_east_south_leg_0_1",
+        "lower_m": [
+          2.62,
+          1.9899999999999998,
+          0.0
+        ],
+        "upper_m": [
+          2.66,
+          2.03,
+          0.6649999999999999
+        ]
+      },
+      {
+        "id": "terrain_east_south_leg_1_0",
+        "lower_m": [
+          3.09,
+          1.5699999999999998,
+          0.0
+        ],
+        "upper_m": [
+          3.13,
+          1.6099999999999999,
+          0.6649999999999999
+        ]
+      },
+      {
+        "id": "terrain_east_south_leg_1_1",
+        "lower_m": [
+          3.09,
+          1.9899999999999998,
+          0.0
+        ],
+        "upper_m": [
+          3.13,
+          2.03,
+          0.6649999999999999
+        ]
+      },
+      {
+        "id": "terrain_east_north_leg_0_0",
+        "lower_m": [
+          2.62,
+          2.07,
+          0.0
+        ],
+        "upper_m": [
+          2.66,
+          2.11,
+          0.44499999999999995
+        ]
+      },
+      {
+        "id": "terrain_east_north_leg_0_1",
+        "lower_m": [
+          2.62,
+          2.52,
+          0.0
+        ],
+        "upper_m": [
+          2.66,
+          2.56,
+          0.44499999999999995
+        ]
+      },
+      {
+        "id": "terrain_east_north_leg_1_0",
+        "lower_m": [
+          3.09,
+          2.07,
+          0.0
+        ],
+        "upper_m": [
+          3.13,
+          2.11,
+          0.44499999999999995
+        ]
+      },
+      {
+        "id": "terrain_east_north_leg_1_1",
+        "lower_m": [
+          3.09,
+          2.52,
+          0.0
+        ],
+        "upper_m": [
+          3.13,
+          2.56,
+          0.44499999999999995
+        ]
+      },
+      {
+        "id": "terrain_east_north_brace_0",
+        "lower_m": [
+          2.66,
+          2.07,
+          0.16799999999999998
+        ],
+        "upper_m": [
+          3.09,
+          2.11,
+          0.19299999999999998
+        ]
+      },
+      {
+        "id": "terrain_east_north_brace_1",
+        "lower_m": [
+          2.66,
+          2.52,
+          0.16799999999999998
+        ],
+        "upper_m": [
+          3.09,
+          2.56,
+          0.19299999999999998
+        ]
+      },
+      {
+        "id": "terrain_middle_inner_leg_0_0",
+        "lower_m": [
+          1.02,
+          0.4700000000000001,
+          0.0
+        ],
+        "upper_m": [
+          1.06,
+          0.5100000000000001,
+          0.525
+        ]
+      },
+      {
+        "id": "terrain_middle_inner_leg_0_1",
+        "lower_m": [
+          1.02,
+          0.8899999999999999,
+          0.0
+        ],
+        "upper_m": [
+          1.06,
+          0.9299999999999999,
+          0.525
+        ]
+      },
+      {
+        "id": "terrain_middle_inner_leg_1_0",
+        "lower_m": [
+          1.44,
+          0.4700000000000001,
+          0.0
+        ],
+        "upper_m": [
+          1.48,
+          0.5100000000000001,
+          0.525
+        ]
+      },
+      {
+        "id": "terrain_middle_inner_leg_1_1",
+        "lower_m": [
+          1.44,
+          0.8899999999999999,
+          0.0
+        ],
+        "upper_m": [
+          1.48,
+          0.9299999999999999,
+          0.525
+        ]
+      },
+      {
+        "id": "terrain_middle_inner_brace_0",
+        "lower_m": [
+          1.06,
+          0.4700000000000001,
+          0.196
+        ],
+        "upper_m": [
+          1.44,
+          0.5100000000000001,
+          0.221
+        ]
+      },
+      {
+        "id": "terrain_middle_inner_brace_1",
+        "lower_m": [
+          1.06,
+          0.8899999999999999,
+          0.196
+        ],
+        "upper_m": [
+          1.44,
+          0.9299999999999999,
+          0.221
+        ]
+      },
+      {
+        "id": "terrain_west_gap_south_leg_0_0",
+        "lower_m": [
+          0.88,
+          0.13999999999999999,
+          0.0
+        ],
+        "upper_m": [
+          0.92,
+          0.18,
+          0.155
+        ]
+      },
+      {
+        "id": "terrain_west_gap_south_leg_0_1",
+        "lower_m": [
+          0.88,
+          0.29,
+          0.0
+        ],
+        "upper_m": [
+          0.92,
+          0.32999999999999996,
+          0.155
+        ]
+      },
+      {
+        "id": "terrain_west_gap_south_leg_1_0",
+        "lower_m": [
+          1.19,
+          0.13999999999999999,
+          0.0
+        ],
+        "upper_m": [
+          1.23,
+          0.18,
+          0.155
+        ]
+      },
+      {
+        "id": "terrain_west_gap_south_leg_1_1",
+        "lower_m": [
+          1.19,
+          0.29,
+          0.0
+        ],
+        "upper_m": [
+          1.23,
+          0.32999999999999996,
+          0.155
+        ]
+      },
+      {
+        "id": "terrain_west_gap_north_leg_0_0",
+        "lower_m": [
+          0.5,
+          0.9400000000000001,
+          0.0
+        ],
+        "upper_m": [
+          0.54,
+          0.9800000000000001,
+          0.39499999999999996
+        ]
+      },
+      {
+        "id": "terrain_west_gap_north_leg_0_1",
+        "lower_m": [
+          0.5,
+          1.14,
+          0.0
+        ],
+        "upper_m": [
+          0.54,
+          1.18,
+          0.39499999999999996
+        ]
+      },
+      {
+        "id": "terrain_west_gap_north_leg_1_0",
+        "lower_m": [
+          0.79,
+          0.9400000000000001,
+          0.0
+        ],
+        "upper_m": [
+          0.8300000000000001,
+          0.9800000000000001,
+          0.39499999999999996
+        ]
+      },
+      {
+        "id": "terrain_west_gap_north_leg_1_1",
+        "lower_m": [
+          0.79,
+          1.14,
+          0.0
+        ],
+        "upper_m": [
+          0.8300000000000001,
+          1.18,
+          0.39499999999999996
+        ]
+      },
+      {
+        "id": "terrain_west_gap_north_brace_0",
+        "lower_m": [
+          0.54,
+          0.9400000000000001,
+          0.147
+        ],
+        "upper_m": [
+          0.79,
+          0.9800000000000001,
+          0.172
+        ]
+      },
+      {
+        "id": "terrain_west_gap_north_brace_1",
+        "lower_m": [
+          0.54,
+          1.14,
+          0.147
+        ],
+        "upper_m": [
+          0.79,
+          1.18,
+          0.172
+        ]
+      },
+      {
+        "id": "terrain_east_gap_south_leg_0_0",
+        "lower_m": [
+          2.17,
+          0.97,
+          0.0
+        ],
+        "upper_m": [
+          2.21,
+          1.01,
+          0.495
+        ]
+      },
+      {
+        "id": "terrain_east_gap_south_leg_0_1",
+        "lower_m": [
+          2.17,
+          1.29,
+          0.0
+        ],
+        "upper_m": [
+          2.21,
+          1.33,
+          0.495
+        ]
+      },
+      {
+        "id": "terrain_east_gap_south_leg_1_0",
+        "lower_m": [
+          2.39,
+          0.97,
+          0.0
+        ],
+        "upper_m": [
+          2.43,
+          1.01,
+          0.495
+        ]
+      },
+      {
+        "id": "terrain_east_gap_south_leg_1_1",
+        "lower_m": [
+          2.39,
+          1.29,
+          0.0
+        ],
+        "upper_m": [
+          2.43,
+          1.33,
+          0.495
+        ]
+      },
+      {
+        "id": "terrain_east_gap_south_brace_0",
+        "lower_m": [
+          2.21,
+          0.97,
+          0.182
+        ],
+        "upper_m": [
+          2.39,
+          1.01,
+          0.207
+        ]
+      },
+      {
+        "id": "terrain_east_gap_south_brace_1",
+        "lower_m": [
+          2.21,
+          1.29,
+          0.182
+        ],
+        "upper_m": [
+          2.39,
+          1.33,
+          0.207
+        ]
+      },
+      {
+        "id": "terrain_east_gap_north_leg_0_0",
+        "lower_m": [
+          1.82,
+          1.8,
+          0.0
+        ],
+        "upper_m": [
+          1.86,
+          1.84,
+          0.695
+        ]
+      },
+      {
+        "id": "terrain_east_gap_north_leg_0_1",
+        "lower_m": [
+          1.82,
+          2.02,
+          0.0
+        ],
+        "upper_m": [
+          1.86,
+          2.06,
+          0.695
+        ]
+      },
+      {
+        "id": "terrain_east_gap_north_leg_1_0",
+        "lower_m": [
+          2.06,
+          1.8,
+          0.0
+        ],
+        "upper_m": [
+          2.1,
+          1.84,
+          0.695
+        ]
+      },
+      {
+        "id": "terrain_east_gap_north_leg_1_1",
+        "lower_m": [
+          2.06,
+          2.02,
+          0.0
+        ],
+        "upper_m": [
+          2.1,
+          2.06,
+          0.695
+        ]
+      },
+      {
+        "id": "terrain_east_gap_north_brace_0",
+        "lower_m": [
+          1.86,
+          1.8,
+          0.252
+        ],
+        "upper_m": [
+          2.06,
+          1.84,
+          0.277
+        ]
+      },
+      {
+        "id": "terrain_east_gap_north_brace_1",
+        "lower_m": [
+          1.86,
+          2.02,
+          0.252
+        ],
+        "upper_m": [
+          2.06,
+          2.06,
+          0.277
+        ]
+      },
+      {
+        "id": "terrain_inner_high_dock_leg_0_0",
+        "lower_m": [
+          0.97,
+          0.98,
+          0.0
+        ],
+        "upper_m": [
+          1.01,
+          1.02,
+          0.655
+        ]
+      },
+      {
+        "id": "terrain_inner_high_dock_leg_0_1",
+        "lower_m": [
+          0.97,
+          1.06,
+          0.0
+        ],
+        "upper_m": [
+          1.01,
+          1.1,
+          0.655
+        ]
+      },
+      {
+        "id": "terrain_inner_high_dock_leg_1_0",
+        "lower_m": [
+          1.19,
+          0.98,
+          0.0
+        ],
+        "upper_m": [
+          1.23,
+          1.02,
+          0.655
+        ]
+      },
+      {
+        "id": "terrain_inner_high_dock_leg_1_1",
+        "lower_m": [
+          1.19,
+          1.06,
+          0.0
+        ],
+        "upper_m": [
+          1.23,
+          1.1,
+          0.655
+        ]
+      },
+      {
+        "id": "terrain_inner_high_dock_brace_0",
+        "lower_m": [
+          1.01,
+          0.98,
+          0.238
+        ],
+        "upper_m": [
+          1.19,
+          1.02,
+          0.263
+        ]
+      },
+      {
+        "id": "terrain_inner_high_dock_brace_1",
+        "lower_m": [
+          1.01,
+          1.06,
+          0.238
+        ],
+        "upper_m": [
+          1.19,
+          1.1,
+          0.263
+        ]
+      },
+      {
+        "id": "terrain_outer_high_dock_leg_0_0",
+        "lower_m": [
+          2.2,
+          1.72,
+          0.0
+        ],
+        "upper_m": [
+          2.24,
+          1.76,
+          0.855
+        ]
+      },
+      {
+        "id": "terrain_outer_high_dock_leg_0_1",
+        "lower_m": [
+          2.2,
+          1.92,
+          0.0
+        ],
+        "upper_m": [
+          2.24,
+          1.96,
+          0.855
+        ]
+      },
+      {
+        "id": "terrain_outer_high_dock_leg_1_0",
+        "lower_m": [
+          2.39,
+          1.72,
+          0.0
+        ],
+        "upper_m": [
+          2.43,
+          1.76,
+          0.855
+        ]
+      },
+      {
+        "id": "terrain_outer_high_dock_leg_1_1",
+        "lower_m": [
+          2.39,
+          1.92,
+          0.0
+        ],
+        "upper_m": [
+          2.43,
+          1.96,
+          0.855
+        ]
+      },
+      {
+        "id": "terrain_outer_high_dock_brace_0",
+        "lower_m": [
+          2.24,
+          1.72,
+          0.308
+        ],
+        "upper_m": [
+          2.39,
+          1.76,
+          0.333
+        ]
+      },
+      {
+        "id": "terrain_outer_high_dock_brace_1",
+        "lower_m": [
+          2.24,
+          1.92,
+          0.308
+        ],
+        "upper_m": [
+          2.39,
+          1.96,
+          0.333
+        ]
+      },
+      {
+        "id": "terrain_west_south",
+        "lower_m": [
+          0.04999999999999999,
+          -0.6799999999999999,
+          0.045
+        ],
+        "upper_m": [
+          0.65,
+          0.0,
+          0.08
+        ]
+      },
+      {
+        "id": "terrain_west_north",
+        "lower_m": [
+          0.04999999999999999,
+          0.0,
+          0.41500000000000004
+        ],
+        "upper_m": [
+          0.65,
+          0.6,
+          0.45
+        ]
+      },
+      {
+        "id": "terrain_middle_south",
+        "lower_m": [
+          1.5999999999999999,
+          0.19999999999999998,
+          0.345
+        ],
+        "upper_m": [
+          2.15,
+          0.95,
+          0.38
+        ]
+      },
+      {
+        "id": "terrain_middle_north",
+        "lower_m": [
+          0.85,
+          1.15,
+          0.125
+        ],
+        "upper_m": [
+          1.5,
+          1.85,
+          0.16
+        ]
+      },
+      {
+        "id": "terrain_east_south",
+        "lower_m": [
+          2.6,
+          1.5499999999999998,
+          0.6649999999999999
+        ],
+        "upper_m": [
+          3.15,
+          2.05,
+          0.7
+        ]
+      },
+      {
+        "id": "terrain_east_north",
+        "lower_m": [
+          2.6,
+          2.05,
+          0.44499999999999995
+        ],
+        "upper_m": [
+          3.15,
+          2.58,
+          0.48
+        ]
+      },
+      {
+        "id": "terrain_middle_upper",
+        "lower_m": [
+          1.55,
+          1.05,
+          0.94
+        ],
+        "upper_m": [
+          2.1,
+          1.68,
+          1.02
+        ]
+      },
+      {
+        "id": "terrain_middle_inner",
+        "lower_m": [
+          1.0,
+          0.45000000000000007,
+          0.525
+        ],
+        "upper_m": [
+          1.5,
+          0.95,
+          0.56
+        ]
+      },
+      {
+        "id": "terrain_west_gap_south",
+        "lower_m": [
+          0.86,
+          0.12,
+          0.155
+        ],
+        "upper_m": [
+          1.25,
+          0.35,
+          0.18
+        ]
+      },
+      {
+        "id": "terrain_west_gap_north",
+        "lower_m": [
+          0.48,
+          0.92,
+          0.39499999999999996
+        ],
+        "upper_m": [
+          0.85,
+          1.2,
+          0.42
+        ]
+      },
+      {
+        "id": "terrain_east_gap_south",
+        "lower_m": [
+          2.15,
+          0.95,
+          0.495
+        ],
+        "upper_m": [
+          2.45,
+          1.35,
+          0.52
+        ]
+      },
+      {
+        "id": "terrain_east_gap_north",
+        "lower_m": [
+          1.8,
+          1.78,
+          0.695
+        ],
+        "upper_m": [
+          2.12,
+          2.08,
+          0.72
+        ]
+      },
+      {
+        "id": "terrain_inner_high_dock",
+        "lower_m": [
+          0.95,
+          0.96,
+          0.655
+        ],
+        "upper_m": [
+          1.25,
+          1.12,
+          0.68
+        ]
+      },
+      {
+        "id": "terrain_outer_high_dock",
+        "lower_m": [
+          2.18,
+          1.7,
+          0.855
+        ],
+        "upper_m": [
+          2.45,
+          1.98,
+          0.88
+        ]
+      },
+      {
+        "id": "terrain_source",
+        "lower_m": [
+          -0.31,
+          -0.16,
+          0.51
+        ],
+        "upper_m": [
+          0.010000000000000009,
+          0.16,
+          0.55
+        ]
+      },
+      {
+        "id": "terrain_goal",
+        "lower_m": [
+          3.19,
+          1.9400000000000002,
+          0.66
+        ],
+        "upper_m": [
+          3.5100000000000002,
+          2.2600000000000002,
+          0.72
+        ]
+      }
+    ],
+    "planning": {
+      "edge_max_joint_delta_rad": 0.01,
+      "max_queries": 25000,
+      "seed": 71,
+      "tracking_clearance_m": 0.0
+    },
+    "robot_model": "xml/franka_emika_panda/panda.xml",
+    "schema_version": "joint-map-v1",
+    "start_tool_pose": {
+      "frame": "world",
+      "position_m": [
+        -0.09997150431850413,
+        7.008013838805116e-05,
+        0.753100047161232
+      ],
+      "quaternion_wxyz": [
+        0.0001373286847920723,
+        4.406068975488372e-05,
+        0.9999999321569214,
+        0.0003389478431167271
+      ]
+    },
+    "status": "DESIGN_CANDIDATE_PENDING_FULL_ARM_FEASIBILITY",
+    "tool_link": "hand",
+    "tool_reference_radius_m": 0.025,
+    "tool_workspace_m": [
+      [
+        -0.76,
+        4.01
+      ],
+      [
+        -1.01,
+        2.91
+      ],
+      [
+        -0.23,
+        1.53
+      ]
+    ],
+    "compound_obstacle_groups": [
+      {
+        "id": "cell_boundary",
+        "component_ids": [
+          "boundary_west",
+          "boundary_east",
+          "boundary_south",
+          "boundary_north"
+        ]
+      },
+      {
+        "id": "cell_east_service",
+        "component_ids": [
+          "east_baffle",
+          "east_overhang",
+          "east_overhang_post",
+          "side_roof",
+          "side_roof_post"
+        ]
+      },
+      {
+        "id": "cell_fixture_input_rack",
+        "component_ids": [
+          "s0_rear_l",
+          "s0_rear_r",
+          "s0_front_l",
+          "s0_front_r",
+          "s0_top_rail",
+          "s0_lower_shelf",
+          "s0_upper_shelf",
+          "terrain_source"
+        ]
+      },
+      {
+        "id": "cell_fixture_process_input",
+        "component_ids": [
+          "p1_leg_0_0",
+          "p1_leg_0_1",
+          "p1_leg_1_0",
+          "p1_leg_1_1",
+          "p1_cabinet",
+          "terrain_goal"
+        ]
+      },
+      {
+        "id": "cell_fixture_quality_1",
+        "component_ids": [
+          "q1_base",
+          "q1_left",
+          "q1_right",
+          "q1_back",
+          "q1_roof",
+          "q1_pan"
+        ]
+      },
+      {
+        "id": "cell_fixture_quality_2",
+        "component_ids": [
+          "q2_base",
+          "q2_left",
+          "q2_right",
+          "q2_back",
+          "q2_front_l",
+          "q2_front_r",
+          "q2_front_bottom",
+          "q2_front_top",
+          "q2_pan_stand",
+          "q2_pan",
+          "terrain_middle_upper"
+        ]
+      },
+      {
+        "id": "cell_fixture_terrain_east_gap_north",
+        "component_ids": [
+          "terrain_east_gap_north_leg_0_0",
+          "terrain_east_gap_north_leg_0_1",
+          "terrain_east_gap_north_leg_1_0",
+          "terrain_east_gap_north_leg_1_1",
+          "terrain_east_gap_north_brace_0",
+          "terrain_east_gap_north_brace_1",
+          "terrain_east_gap_north"
+        ]
+      },
+      {
+        "id": "cell_fixture_terrain_east_gap_south",
+        "component_ids": [
+          "terrain_east_gap_south_leg_0_0",
+          "terrain_east_gap_south_leg_0_1",
+          "terrain_east_gap_south_leg_1_0",
+          "terrain_east_gap_south_leg_1_1",
+          "terrain_east_gap_south_brace_0",
+          "terrain_east_gap_south_brace_1",
+          "terrain_east_gap_south"
+        ]
+      },
+      {
+        "id": "cell_fixture_terrain_east_north",
+        "component_ids": [
+          "terrain_east_north_leg_0_0",
+          "terrain_east_north_leg_0_1",
+          "terrain_east_north_leg_1_0",
+          "terrain_east_north_leg_1_1",
+          "terrain_east_north_brace_0",
+          "terrain_east_north_brace_1",
+          "terrain_east_north"
+        ]
+      },
+      {
+        "id": "cell_fixture_terrain_east_south",
+        "component_ids": [
+          "terrain_east_south_leg_0_0",
+          "terrain_east_south_leg_0_1",
+          "terrain_east_south_leg_1_0",
+          "terrain_east_south_leg_1_1",
+          "terrain_east_south"
+        ]
+      },
+      {
+        "id": "cell_fixture_terrain_inner_high_dock",
+        "component_ids": [
+          "terrain_inner_high_dock_leg_0_0",
+          "terrain_inner_high_dock_leg_0_1",
+          "terrain_inner_high_dock_leg_1_0",
+          "terrain_inner_high_dock_leg_1_1",
+          "terrain_inner_high_dock_brace_0",
+          "terrain_inner_high_dock_brace_1",
+          "terrain_inner_high_dock"
+        ]
+      },
+      {
+        "id": "cell_fixture_terrain_middle_inner",
+        "component_ids": [
+          "terrain_middle_inner_leg_0_0",
+          "terrain_middle_inner_leg_0_1",
+          "terrain_middle_inner_leg_1_0",
+          "terrain_middle_inner_leg_1_1",
+          "terrain_middle_inner_brace_0",
+          "terrain_middle_inner_brace_1",
+          "terrain_middle_inner"
+        ]
+      },
+      {
+        "id": "cell_fixture_terrain_middle_north",
+        "component_ids": [
+          "terrain_middle_north_leg_0_0",
+          "terrain_middle_north_leg_0_1",
+          "terrain_middle_north_leg_1_0",
+          "terrain_middle_north_leg_1_1",
+          "terrain_middle_north"
+        ]
+      },
+      {
+        "id": "cell_fixture_terrain_middle_south",
+        "component_ids": [
+          "terrain_middle_south_leg_0_0",
+          "terrain_middle_south_leg_0_1",
+          "terrain_middle_south_leg_1_0",
+          "terrain_middle_south_leg_1_1",
+          "terrain_middle_south_brace_0",
+          "terrain_middle_south_brace_1",
+          "terrain_middle_south"
+        ]
+      },
+      {
+        "id": "cell_fixture_terrain_outer_high_dock",
+        "component_ids": [
+          "terrain_outer_high_dock_leg_0_0",
+          "terrain_outer_high_dock_leg_0_1",
+          "terrain_outer_high_dock_leg_1_0",
+          "terrain_outer_high_dock_leg_1_1",
+          "terrain_outer_high_dock_brace_0",
+          "terrain_outer_high_dock_brace_1",
+          "terrain_outer_high_dock"
+        ]
+      },
+      {
+        "id": "cell_fixture_terrain_west_gap_north",
+        "component_ids": [
+          "terrain_west_gap_north_leg_0_0",
+          "terrain_west_gap_north_leg_0_1",
+          "terrain_west_gap_north_leg_1_0",
+          "terrain_west_gap_north_leg_1_1",
+          "terrain_west_gap_north_brace_0",
+          "terrain_west_gap_north_brace_1",
+          "terrain_west_gap_north"
+        ]
+      },
+      {
+        "id": "cell_fixture_terrain_west_gap_south",
+        "component_ids": [
+          "terrain_west_gap_south_leg_0_0",
+          "terrain_west_gap_south_leg_0_1",
+          "terrain_west_gap_south_leg_1_0",
+          "terrain_west_gap_south_leg_1_1",
+          "terrain_west_gap_south"
+        ]
+      },
+      {
+        "id": "cell_fixture_terrain_west_north",
+        "component_ids": [
+          "terrain_west_north_leg_0_0",
+          "terrain_west_north_leg_0_1",
+          "terrain_west_north_leg_1_0",
+          "terrain_west_north_leg_1_1",
+          "terrain_west_north_brace_0",
+          "terrain_west_north_brace_1",
+          "terrain_west_north"
+        ]
+      },
+      {
+        "id": "cell_fixture_terrain_west_south",
+        "component_ids": [
+          "terrain_west_south_leg_0_0",
+          "terrain_west_south_leg_0_1",
+          "terrain_west_south_leg_1_0",
+          "terrain_west_south_leg_1_1",
+          "terrain_west_south"
+        ]
+      },
+      {
+        "id": "cell_island",
+        "component_ids": [
+          "island_toe"
+        ]
+      },
+      {
+        "id": "cell_lower_service",
+        "component_ids": [
+          "lower_roof",
+          "lower_post_1",
+          "lower_post_2"
+        ]
+      },
+      {
+        "id": "cell_offset_baffles",
+        "component_ids": [
+          "offset_baffle_1",
+          "offset_baffle_2"
+        ]
+      },
+      {
+        "id": "cell_upper_service",
+        "component_ids": [
+          "upper_arch_roof",
+          "upper_arch_post"
+        ]
+      }
+    ],
+    "embedded_support_components": {
+      "source_support": "terrain_source",
+      "relay_1_support": "terrain_inner_high_dock",
+      "relay_2_support": "terrain_east_gap_south",
+      "goal_support": "terrain_goal",
+      "quality_1_support": "q1_pan",
+      "quality_2_support": "q2_pan"
+    },
+    "query_visual": {
+      "component_colors": {
+        "boundary_west": "#c9d0d2",
+        "boundary_east": "#c9d0d2",
+        "boundary_south": "#c9d0d2",
+        "boundary_north": "#c9d0d2",
+        "island_toe": "#aa9878",
+        "lower_roof": "#8ca3ae",
+        "lower_post_1": "#8ca3ae",
+        "lower_post_2": "#8ca3ae",
+        "offset_baffle_1": "#d5b47f",
+        "offset_baffle_2": "#d5b47f",
+        "upper_arch_roof": "#91ada5",
+        "upper_arch_post": "#91ada5",
+        "east_baffle": "#839ba9",
+        "east_overhang": "#839ba9",
+        "east_overhang_post": "#839ba9",
+        "side_roof": "#839ba9",
+        "side_roof_post": "#839ba9",
+        "s0_rear_l": "#73858f",
+        "s0_rear_r": "#73858f",
+        "s0_front_l": "#73858f",
+        "s0_front_r": "#73858f",
+        "s0_top_rail": "#73858f",
+        "s0_lower_shelf": "#b8c3c9",
+        "s0_upper_shelf": "#b8c3c9",
+        "q1_base": "#d5dde1",
+        "q1_left": "#a6c1cc",
+        "q1_right": "#a6c1cc",
+        "q1_back": "#a6c1cc",
+        "q1_roof": "#8eabb6",
+        "q1_pan": "#aec4cd",
+        "q2_base": "#d2dbe0",
+        "q2_left": "#aec4cd",
+        "q2_right": "#aec4cd",
+        "q2_back": "#aec4cd",
+        "q2_front_l": "#d2dbe0",
+        "q2_front_r": "#d2dbe0",
+        "q2_front_bottom": "#d2dbe0",
+        "q2_front_top": "#d2dbe0",
+        "q2_pan_stand": "#d2dbe0",
+        "q2_pan": "#aec4cd",
+        "p1_leg_0_0": "#7f919a",
+        "p1_leg_0_1": "#7f919a",
+        "p1_leg_1_0": "#7f919a",
+        "p1_leg_1_1": "#7f919a",
+        "p1_cabinet": "#b8c8cf",
+        "terrain_west_south_leg_0_0": "#6e828d",
+        "terrain_west_south_leg_0_1": "#6e828d",
+        "terrain_west_south_leg_1_0": "#6e828d",
+        "terrain_west_south_leg_1_1": "#6e828d",
+        "terrain_west_north_leg_0_0": "#6e828d",
+        "terrain_west_north_leg_0_1": "#6e828d",
+        "terrain_west_north_leg_1_0": "#6e828d",
+        "terrain_west_north_leg_1_1": "#6e828d",
+        "terrain_west_north_brace_0": "#6e828d",
+        "terrain_west_north_brace_1": "#6e828d",
+        "terrain_middle_south_leg_0_0": "#6e828d",
+        "terrain_middle_south_leg_0_1": "#6e828d",
+        "terrain_middle_south_leg_1_0": "#6e828d",
+        "terrain_middle_south_leg_1_1": "#6e828d",
+        "terrain_middle_south_brace_0": "#6e828d",
+        "terrain_middle_south_brace_1": "#6e828d",
+        "terrain_middle_north_leg_0_0": "#6e828d",
+        "terrain_middle_north_leg_0_1": "#6e828d",
+        "terrain_middle_north_leg_1_0": "#6e828d",
+        "terrain_middle_north_leg_1_1": "#6e828d",
+        "terrain_east_south_leg_0_0": "#6e828d",
+        "terrain_east_south_leg_0_1": "#6e828d",
+        "terrain_east_south_leg_1_0": "#6e828d",
+        "terrain_east_south_leg_1_1": "#6e828d",
+        "terrain_east_north_leg_0_0": "#6e828d",
+        "terrain_east_north_leg_0_1": "#6e828d",
+        "terrain_east_north_leg_1_0": "#6e828d",
+        "terrain_east_north_leg_1_1": "#6e828d",
+        "terrain_east_north_brace_0": "#6e828d",
+        "terrain_east_north_brace_1": "#6e828d",
+        "terrain_middle_inner_leg_0_0": "#6e828d",
+        "terrain_middle_inner_leg_0_1": "#6e828d",
+        "terrain_middle_inner_leg_1_0": "#6e828d",
+        "terrain_middle_inner_leg_1_1": "#6e828d",
+        "terrain_middle_inner_brace_0": "#6e828d",
+        "terrain_middle_inner_brace_1": "#6e828d",
+        "terrain_west_gap_south_leg_0_0": "#6e828d",
+        "terrain_west_gap_south_leg_0_1": "#6e828d",
+        "terrain_west_gap_south_leg_1_0": "#6e828d",
+        "terrain_west_gap_south_leg_1_1": "#6e828d",
+        "terrain_west_gap_north_leg_0_0": "#6e828d",
+        "terrain_west_gap_north_leg_0_1": "#6e828d",
+        "terrain_west_gap_north_leg_1_0": "#6e828d",
+        "terrain_west_gap_north_leg_1_1": "#6e828d",
+        "terrain_west_gap_north_brace_0": "#6e828d",
+        "terrain_west_gap_north_brace_1": "#6e828d",
+        "terrain_east_gap_south_leg_0_0": "#6e828d",
+        "terrain_east_gap_south_leg_0_1": "#6e828d",
+        "terrain_east_gap_south_leg_1_0": "#6e828d",
+        "terrain_east_gap_south_leg_1_1": "#6e828d",
+        "terrain_east_gap_south_brace_0": "#6e828d",
+        "terrain_east_gap_south_brace_1": "#6e828d",
+        "terrain_east_gap_north_leg_0_0": "#6e828d",
+        "terrain_east_gap_north_leg_0_1": "#6e828d",
+        "terrain_east_gap_north_leg_1_0": "#6e828d",
+        "terrain_east_gap_north_leg_1_1": "#6e828d",
+        "terrain_east_gap_north_brace_0": "#6e828d",
+        "terrain_east_gap_north_brace_1": "#6e828d",
+        "terrain_inner_high_dock_leg_0_0": "#6e828d",
+        "terrain_inner_high_dock_leg_0_1": "#6e828d",
+        "terrain_inner_high_dock_leg_1_0": "#6e828d",
+        "terrain_inner_high_dock_leg_1_1": "#6e828d",
+        "terrain_inner_high_dock_brace_0": "#6e828d",
+        "terrain_inner_high_dock_brace_1": "#6e828d",
+        "terrain_outer_high_dock_leg_0_0": "#6e828d",
+        "terrain_outer_high_dock_leg_0_1": "#6e828d",
+        "terrain_outer_high_dock_leg_1_0": "#6e828d",
+        "terrain_outer_high_dock_leg_1_1": "#6e828d",
+        "terrain_outer_high_dock_brace_0": "#6e828d",
+        "terrain_outer_high_dock_brace_1": "#6e828d",
+        "terrain_west_south": "#969696",
+        "terrain_west_north": "#969696",
+        "terrain_middle_south": "#969696",
+        "terrain_middle_north": "#969696",
+        "terrain_east_south": "#969696",
+        "terrain_east_north": "#969696",
+        "terrain_middle_upper": "#969696",
+        "terrain_middle_inner": "#969696",
+        "terrain_west_gap_south": "#b7c3c9",
+        "terrain_west_gap_north": "#b7c3c9",
+        "terrain_east_gap_south": "#e0a033",
+        "terrain_east_gap_north": "#b7c3c9",
+        "terrain_inner_high_dock": "#e0a033",
+        "terrain_outer_high_dock": "#b7c3c9",
+        "terrain_source": "#3289c7",
+        "terrain_goal": "#3d9e60"
+      },
+      "support_colors": {
+        "source_support": "#3289c7",
+        "relay_1_support": "#e0a033",
+        "relay_2_support": "#e0a033",
+        "goal_support": "#3d9e60",
+        "quality_1_support": "#aec4cd",
+        "quality_2_support": "#aec4cd"
+      },
+      "floor_color": "#ffffff",
+      "vessel_color": "#8f68bd",
+      "camera": {
+        "position_m": [
+          5.2,
+          -3.8,
+          3.7
+        ],
+        "lookat_m": [
+          1.55,
+          0.95,
+          0.65
+        ],
+        "fov_deg": 44.0
+      },
+      "hidden_component_ids": [
+        "boundary_south",
+        "boundary_east"
+      ]
+    }
+  },
+  "active_arm_id": "arm_0",
+  "robots": [
+    {
+      "id": "arm_0",
+      "base_placement": {
+        "x_m": 0.5,
+        "y_m": 0.48,
+        "yaw_rad": -2.4668517113662407
+      },
+      "base_z_m": 0.451,
+      "q_rad": [
+        0.0,
+        -0.785,
+        0.0,
+        -2.356,
+        0.0,
+        1.571,
+        0.785
+      ],
+      "finger_q_m": [
+        0.04,
+        0.04
+      ]
+    },
+    {
+      "id": "arm_1",
+      "base_placement": {
+        "x_m": 1.73,
+        "y_m": 0.85,
+        "yaw_rad": 2.880113837877544
+      },
+      "base_z_m": 0.381,
+      "q_rad": [
+        1.5707963267948966,
+        0.0,
+        0.0,
+        -1.57,
+        0.0,
+        1.57,
+        0.785
+      ],
+      "finger_q_m": [
+        0.04,
+        0.04
+      ]
+    },
+    {
+      "id": "arm_2",
+      "base_placement": {
+        "x_m": 2.7,
+        "y_m": 1.65,
+        "yaw_rad": -1.5707963267948966
+      },
+      "base_z_m": 0.701,
+      "q_rad": [
+        0.0,
+        -0.785,
+        0.0,
+        -2.356,
+        0.0,
+        1.571,
+        0.785
+      ],
+      "finger_q_m": [
+        0.04,
+        0.04
+      ]
+    }
+  ],
+  "container": {
+    "geometry_model": "centered_overhead_handle_v3",
+    "handle_width_m": 0.04,
+    "mass_limit_kg": 0.1,
+    "open_top": true,
+    "outer_size_m": [
+      0.12,
+      0.1,
+      0.06
+    ],
+    "partitions": 0,
+    "wall_m": 0.006
+  },
+  "body_pose": {
+    "frame": "world",
+    "position_m": [
+      -0.1,
+      0.0,
+      0.65
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "body_id": "tray_0",
+  "support_stations": [
+    {
+      "id": "source_support",
+      "frame": "world",
+      "units": "m",
+      "axis_aligned": true,
+      "size_m": [
+        0.32,
+        0.32,
+        0.040000000000000036
+      ],
+      "center_world_m": [
+        -0.15,
+        0.0,
+        0.53
+      ]
+    },
+    {
+      "id": "relay_1_support",
+      "frame": "world",
+      "units": "m",
+      "axis_aligned": true,
+      "size_m": [
+        0.30000000000000004,
+        0.16000000000000014,
+        0.025000000000000022
+      ],
+      "center_world_m": [
+        1.1,
+        1.04,
+        0.6675
+      ]
+    },
+    {
+      "id": "relay_2_support",
+      "frame": "world",
+      "units": "m",
+      "axis_aligned": true,
+      "size_m": [
+        0.30000000000000027,
+        0.40000000000000013,
+        0.025000000000000022
+      ],
+      "center_world_m": [
+        2.3,
+        1.15,
+        0.5075000000000001
+      ]
+    },
+    {
+      "id": "goal_support",
+      "frame": "world",
+      "units": "m",
+      "axis_aligned": true,
+      "size_m": [
+        0.3200000000000003,
+        0.32000000000000006,
+        0.05999999999999994
+      ],
+      "center_world_m": [
+        3.35,
+        2.1,
+        0.69
+      ]
+    },
+    {
+      "id": "quality_1_support",
+      "frame": "world",
+      "units": "m",
+      "axis_aligned": true,
+      "size_m": [
+        0.36000000000000004,
+        0.25,
+        0.040000000000000036
+      ],
+      "center_world_m": [
+        0.59,
+        1.675,
+        0.54
+      ]
+    },
+    {
+      "id": "quality_2_support",
+      "frame": "world",
+      "units": "m",
+      "axis_aligned": true,
+      "size_m": [
+        0.20999999999999996,
+        0.3500000000000001,
+        0.019999999999999962
+      ],
+      "center_world_m": [
+        1.825,
+        1.305,
+        0.47
+      ]
+    }
+  ],
+  "contents": [
+    {
+      "id": "tray_0:0",
+      "radius_m": 0.012,
+      "center_world_m": [
+        -0.125,
+        -0.025,
+        0.5680000000000001
+      ]
+    },
+    {
+      "id": "tray_0:1",
+      "radius_m": 0.012,
+      "center_world_m": [
+        -0.125,
+        0.025,
+        0.5680000000000001
+      ]
+    },
+    {
+      "id": "tray_0:2",
+      "radius_m": 0.012,
+      "center_world_m": [
+        -0.07500000000000001,
+        -0.025,
+        0.5680000000000001
+      ]
+    },
+    {
+      "id": "tray_0:3",
+      "radius_m": 0.012,
+      "center_world_m": [
+        -0.07500000000000001,
+        0.025,
+        0.5680000000000001
+      ]
+    }
+  ],
+  "endpoint_hand_pose": {
+    "frame": "world",
+    "position_m": [
+      -0.1,
+      0.0,
+      0.7531
+    ],
+    "quaternion_wxyz": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  "targets": {
+    "source_support": {
+      "frame": "world",
+      "position_m": [
+        -0.09997150431850413,
+        7.008013838805116e-05,
+        0.753100047161232
+      ],
+      "quaternion_wxyz": [
+        0.0001373286847920723,
+        4.406068975488372e-05,
+        0.9999999321569214,
+        0.0003389478431167271
+      ]
+    },
+    "relay_1_support": {
+      "frame": "world",
+      "position_m": [
+        1.0200284956814958,
+        1.040070080138388,
+        0.883100047161232
+      ],
+      "quaternion_wxyz": [
+        0.0003389478431167271,
+        0.9999999321569214,
+        -4.406068975488371e-05,
+        -0.00013732868479207226
+      ]
+    },
+    "relay_2_support": {
+      "frame": "world",
+      "position_m": [
+        2.350028495681496,
+        1.020070080138388,
+        0.723100047161232
+      ],
+      "quaternion_wxyz": [
+        0.0003389478431167271,
+        0.9999999321569214,
+        -4.406068975488371e-05,
+        -0.00013732868479207226
+      ]
+    },
+    "goal_support": {
+      "frame": "world",
+      "position_m": [
+        3.350028495681496,
+        2.100070080138388,
+        0.923100047161232
+      ],
+      "quaternion_wxyz": [
+        0.0003389478431167271,
+        0.9999999321569214,
+        -4.406068975488371e-05,
+        -0.00013732868479207226
+      ]
+    },
+    "quality_1_support": {
+      "frame": "world",
+      "position_m": [
+        0.6800284956814959,
+        1.6500700801383879,
+        0.763100047161232
+      ],
+      "quaternion_wxyz": [
+        0.0003389478431167271,
+        0.9999999321569214,
+        -4.406068975488371e-05,
+        -0.00013732868479207226
+      ]
+    },
+    "quality_2_support": {
+      "frame": "world",
+      "position_m": [
+        1.825028495681496,
+        1.2000700801383881,
+        0.683100047161232
+      ],
+      "quaternion_wxyz": [
+        0.0003389478431167271,
+        0.9999999321569214,
+        -4.406068975488371e-05,
+        -0.00013732868479207226
+      ]
+    }
+  },
+  "supported_body_poses": {
+    "source_support": {
+      "frame": "world",
+      "position_m": [
+        -0.1,
+        0.0,
+        0.65
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "relay_1_support": {
+      "frame": "world",
+      "position_m": [
+        1.02,
+        1.04,
+        0.78
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "relay_2_support": {
+      "frame": "world",
+      "position_m": [
+        2.35,
+        1.02,
+        0.62
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "goal_support": {
+      "frame": "world",
+      "position_m": [
+        3.35,
+        2.1,
+        0.82
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "quality_1_support": {
+      "frame": "world",
+      "position_m": [
+        0.68,
+        1.65,
+        0.66
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "quality_2_support": {
+      "frame": "world",
+      "position_m": [
+        1.825,
+        1.2,
+        0.58
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "probe_tasks": {
+    "arm_0": [
+      "source_support",
+      "relay_1_support"
+    ],
+    "arm_1": [
+      "relay_1_support",
+      "relay_2_support",
+      "quality_1_support",
+      "quality_2_support"
+    ],
+    "arm_2": [
+      "relay_2_support",
+      "goal_support"
+    ]
+  },
+  "required_endpoint_groups": [
+    [
+      [
+        "arm_0",
+        "source_support"
+      ]
+    ],
+    [
+      [
+        "arm_0",
+        "relay_1_support"
+      ]
+    ],
+    [
+      [
+        "arm_1",
+        "relay_1_support"
+      ]
+    ],
+    [
+      [
+        "arm_1",
+        "relay_2_support"
+      ]
+    ],
+    [
+      [
+        "arm_1",
+        "quality_1_support"
+      ],
+      [
+        "arm_1",
+        "quality_2_support"
+      ]
+    ],
+    [
+      [
+        "arm_2",
+        "relay_2_support"
+      ]
+    ],
+    [
+      [
+        "arm_2",
+        "goal_support"
+      ]
+    ]
+  ],
+  "selected_regions_by_arm": {
+    "arm_0": "B",
+    "arm_1": "C",
+    "arm_2": "E"
+  },
+  "provenance": {
+    "map_file_sha256": "e617518d1a402eb04285699c3b98187797d2c4d94706f667a7ad83cce6f2b9a6",
+    "prior_world_sha256": "469b766f00b011e5794d25e160b2c98552c242ad0c8cdfd09be17ac9f05e9361",
+    "scope": "Instructor map candidate with unchanged supplied INITIAL. No native run, restored state, solved route or transport acceptance is supplied.",
+    "geometry_revisions": [
+      {
+        "surface_id": "terrain_west_north",
+        "old_top_m": 0.28,
+        "new_top_m": 0.45,
+        "reason": "Fixed installation frame adjusted for actual downward-grasp wrist reach, not an IK tolerance change."
+      },
+      {
+        "surface_id": "terrain_east_south",
+        "old_top_m": 0.18,
+        "new_top_m": 0.7,
+        "reason": "Fixed installation frame adjusted for actual downward-grasp wrist reach, not an IK tolerance change."
+      },
+      {
+        "component_id": "s0_upper_shelf",
+        "new_z_m": [
+          1.02,
+          1.06
+        ],
+        "reason": "Native source grasp collided with upper shelf (link5/link6)."
+      },
+      {
+        "component_id": "q2_front_top",
+        "new_lower_z_m": 0.86,
+        "reason": "Provide physical wrist access at the Q2 input opening."
+      },
+      {
+        "component_id": "q2_front_top",
+        "old_z_m": [
+          0.86,
+          0.94
+        ],
+        "new_z_m": [
+          0.94,
+          1.02
+        ],
+        "reason": "Actual link5 collision at the input aperture. Raise the equipment crossbar while retaining its full collision box."
+      },
+      {
+        "component_id": "east_baffle",
+        "edge": "lower_m",
+        "axis": 0,
+        "old_m": 2.45,
+        "new_m": 2.46,
+        "reason": "Provide a real10mm gap between independent fixed fixtures. Keep the conservative native fixed-pair guard unchanged."
+      },
+      {
+        "component_id": "island_toe",
+        "edge": "upper_m",
+        "axis": 1,
+        "old_m": 1.05,
+        "new_m": 1.04,
+        "reason": "Provide a real10mm gap between independent fixed fixtures. Keep the conservative native fixed-pair guard unchanged."
+      },
+      {
+        "component_id": "lower_post_1",
+        "edge": "lower_m",
+        "axis": 0,
+        "old_m": 0.65,
+        "new_m": 0.66,
+        "reason": "Provide a real10mm gap between independent fixed fixtures. Keep the conservative native fixed-pair guard unchanged."
+      },
+      {
+        "component_ids": [
+          "s0_rear_r",
+          "s0_front_r"
+        ],
+        "old_upper_x_m": 0.05,
+        "new_upper_x_m": 0.04,
+        "reason": "Provide10mm physical gap between independent rack uprights and adjacent mounting plates; do not waive observed contact."
+      }
+    ],
+    "world_sha256": "ce2bb5f163f33214e867404c80964e06fc1d93160905bab32dad69001244ad32",
+    "source_grasp_choice": "Rotate the symmetric overhead-handle grasp by180degrees about worldZ. Endpoint choice only. No route or intermediate joint states.",
+    "initial_park_choice": {
+      "schema_version": "explicit-c-initial-park-choice-v1",
+      "arm_id": "arm_1",
+      "initial_and_retreat_q_rad": [
+        1.5707963267948966,
+        0.0,
+        0.0,
+        -1.57,
+        0.0,
+        1.57,
+        0.785
+      ],
+      "original_initial_and_retreat_q_rad": [
+        0.0,
+        0.0,
+        0.0,
+        -1.57,
+        0.0,
+        1.57,
+        0.785
+      ],
+      "selected_park": "q1_plus_pi_over_2",
+      "probe_result_sha256": "3249a121fdf5fbfab3b0e0a178c268daca9938e07c18a0573a4b2ac60b034af1",
+      "probe_manifest_sha256": "fbeaf36be1c1cc1553afd673cd381fcef1887b52d89175febe410475a42bc984",
+      "original_world_file_sha256": "8d296c1f79df609c1e1ade0fcada19fd9163e06e943bbffe9b633f9a83e117ee",
+      "original_scenario_file_sha256": "99e20c25bad998259cf9666325375bc68ae673b24f4f9b9bfe8d0beec3eb5ac6",
+      "original_phase_choices_file_sha256": "73f00d51b9a07ebbb733829d5160c124a9e9f3c9d81488df91da5e8bead44849",
+      "scope": "Explicit future INITIAL configuration and later retreat ENDPOINT only. No path, intermediate configuration, solved grasp q or observed state is supplied.",
+      "source_prefix_requires_fresh_native_query_and_grasp": true,
+      "physical_feasibility_verified": false,
+      "probe_scope": "Historical R1 body geometry in an isolated nominal scene. One reversed basic single-tree search with forward validation. No source-scene or physical acceptance."
+    }
+  }
+}

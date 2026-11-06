@@ -1,0 +1,50 @@
+{
+  "schema_version": "difficulty-tier-target-and-validation-scope-v1",
+  "case_id": "difficulty_20261106_medium_staggered_v1",
+  "difficulty": "medium",
+  "required_transport_legs": [
+    {
+      "ordinal": 1,
+      "active_arm_id": "arm_0",
+      "source_support": "source_support",
+      "destination_support": "relay_1_support"
+    },
+    {
+      "ordinal": 2,
+      "active_arm_id": "arm_1",
+      "source_support": "relay_1_support",
+      "destination_support": "relay_2_support"
+    }
+  ],
+  "required_arm_count_target": 2,
+  "target_leg_count_is_instructor_candidate": true,
+  "qualified_device_full_mission_available": false,
+  "current_executable_native_review_scope": "arm_0 source_support to relay_1_support, supported release and original rest, with other robot collision geometry fixed",
+  "first_leg_evidence_does_not_qualify_full_map": true,
+  "legacy_three_arm_mission_exists_but_is_not_qualified_fast_sequential_device_completion": true,
+  "fixed_physics_and_criteria_signature_sha256": "2ea9171ad62a65a128ad56525774759a5b9ed95f886951744214b956826c7135",
+  "service_groups_removed": [
+    "cell_east_service",
+    "cell_island",
+    "cell_upper_service"
+  ],
+  "removed_component_ids": [
+    "east_baffle",
+    "east_overhang",
+    "east_overhang_post",
+    "island_toe",
+    "side_roof",
+    "side_roof_post",
+    "upper_arch_post",
+    "upper_arch_roof"
+  ],
+  "distinct_valid_route_families_verified": false,
+  "native_transport_verified": false,
+  "fresh_cpu_export_required_before_native": true,
+  "student_solution_or_intermediate_pose_supplied": false,
+  "material_profile": "four rigid beads, F32, rigid16_bead_tc2h_v1; no per-route physics or threshold tuning",
+  "resource_policy": {
+    "maximum_observed_process_vram_GB": 5,
+    "one_active_dynamic_arm_per_review": true
+  }
+}
